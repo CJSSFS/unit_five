@@ -1,4 +1,6 @@
 import random
+
+
 def play():
     play = input("Would you like to play a game?")
     if play == "yes" or play == "y":
@@ -16,12 +18,17 @@ def main():
         if play():
             guess_total = 0
             number = draw()
-        guess_total = guess_total + 1
-        
-
-
-
-
+            while True:
+                guess = int(input("Guess my number:"))
+                if number == guess:
+                    print("You guessed it")
+                    break
+                elif guess < number:
+                    print("Your number was too low")
+                else:
+                    print("Your number was too high")
+            guess_total = guess_total + 1
+            print("You guessed it in", guess_total)
 
 
 main()
