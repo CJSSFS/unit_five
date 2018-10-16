@@ -20,15 +20,17 @@ def main():
             number = draw()
             while True:
                 guess = int(input("Guess my number:"))
+                guess_total = guess_total + 1
                 if number == guess:
                     print("You guessed it")
                     break
                 elif guess < number:
                     print("Your number was too low")
-                else:
+                elif guess > number:
                     print("Your number was too high")
-            guess_total = guess_total + 1
-            print("You guessed it in", guess_total)
+                    print("You guessed it in", guess_total, "tries")
+                break
+            print("Okay bye.")
 
 
 main()
