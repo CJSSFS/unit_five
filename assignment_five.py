@@ -13,8 +13,8 @@ def play():
     :return: True if the user says yes
              False if the user says they do not want to play
     """
-    play = input("Would you like to play a game?")
-    if play == "yes" or play == "y":
+    play1 = input("Would you like to play a game?")
+    if play1 == "yes" or play1 == "y":
         return True
     else:
         return False
